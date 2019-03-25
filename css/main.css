@@ -1,6 +1,23 @@
-.box{
-	width: 250px;
-	height: 250px;
-	background-color: red;
-	position: relative;
+main 
+{
+	text-align: center;
 }
+
+h1, h3 
+{
+	margin: 30px; 
+}
+
+.container
+{
+	width: 30%;
+	display: inline-block;
+}
+
+.container img
+{
+	display: block;
+	width: 30%;
+	align-content: center;
+}
+

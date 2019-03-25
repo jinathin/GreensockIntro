@@ -1,29 +1,17 @@
 (() => {
-	console.log('fired')
+	// variables first
+	const 	badge       = document.querySelector('img'),
+			footerText	= document.querySelector('h3');
 
-	const targetBox = document.querySelector('.box');
-
-
-	function runAnimation() {
-		TweenMax.to(targetBox. 0.8, {
-			x: 450,
-			roation: 180,
-			scaleX: 1.5,
-			scaleY: 1.5
-		});
+	function animImage() {
+		TweenMax.to(badge, 1.2, { scaleX: 1.025, scaleY: 1.025, 
+			rotation: 50, ease:Elastic.easeOut, onComplete:animFooterText});
 	}
 
-	function runAnimation() {
-		TweenMax.to(targetBox. 0.8, {
-			x: 450,
-			roation: 0,
-			scaleX: 1,
-			scaleY: 1
-		});
+	function animFooterText() {
+		TweenMax.to(footerText, 0.7, { scaleX: 2, scaleY: 2, ease:Elastic.easeInOut});
 	}
+	animImage();
 
-	targetBox.addEventListener("mouseover", runAnimation);
-	targetBox.addEventListener("mouseout", resetAnimation);
-
-
+	badge.addEventListener('mouseover', animImage);
 })();
